@@ -30,7 +30,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './web/index.html'
+      template: paths.templatePath,
     }),
   ],
 };
