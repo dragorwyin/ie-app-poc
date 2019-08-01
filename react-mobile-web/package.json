@@ -1,25 +1,25 @@
 {
-  "name": "react-mobile-web",
-  "version": "1.0.0",
-  "description": "Proof of Concept",
-  "main": "index.web.js",
+  "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/webpack.config.js --env.env=dev",
-    "build": "webpack --config webpack/webpack.config.js --env.env=prod",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "mobile": "expo start"
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject",
+    "start-desktop": "webpack-dev-server --config webpack/webpack.config.js --env.env=dev",
+    "build-desktop": "webpack --config webpack/webpack.config.js --env.env=prod"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "react": "^16.8.6",
+    "expo": "^34.0.1",
+    "react": "16.8.6",
     "react-dom": "^16.8.6",
-    "react-native": "^0.60.4",
-    "react-native-web": "^0.11.5",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-34.0.0.tar.gz",
+    "react-native-web": "^0.11.4",
     "react-redux": "^7.1.0",
     "redux": "^4.0.4"
   },
   "devDependencies": {
+    "babel-preset-expo": "^6.0.0",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
@@ -35,5 +35,6 @@
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.1"
-  }
+  },
+  "private": true
 }
