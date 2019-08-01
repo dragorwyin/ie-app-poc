@@ -15,7 +15,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
-      }
+      },
     ]
   },
   resolve: {
@@ -24,8 +24,8 @@ module.exports = {
   devServer: {
     contentBase: paths.outputPath,
     hot: true,
+    port: 8080,
   },
-  devtool: 'source-map',
   plugins: [
     new CleanWebpackPlugin(),
     new webpack.HotModuleReplacementPlugin(),
@@ -33,4 +33,10 @@ module.exports = {
       template: paths.templatePath,
     }),
   ],
+  watch: true,
+  watchOptions: {
+    aggregateTimeout: 500,
+    ignored: /node_modules/,
+    poll: 3000
+  }
 };
