@@ -6,13 +6,13 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import './styles.scss';
-import App from './App';
+import Clicker from '../components/Clicker/Clicker';
 
 const store = createStore(rootReducers);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Clicker />
   </Provider>,
   document.getElementById('root'),
 );

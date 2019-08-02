@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Mobile from './mobile/Mobile';
+import Clicker from './components/Clicker/Clicker';
 
 import rootReducers from "./redux/initStore";
 import { Provider } from 'react-redux';
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        <Mobile></Mobile>
+        <Clicker></Clicker>
       </View>
     </Provider>
   );

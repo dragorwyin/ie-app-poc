@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
-import { add } from '../redux/actions/counterActions';
+import { add } from '../../redux/actions/counterActions';
 
 export default function Mobile() {
 
@@ -14,7 +14,7 @@ export default function Mobile() {
 
   return (
     <View>
-      <Button title="Click me motherfucker" onPress={onClick}></Button>
+      <Button title="Click me" onPress={onClick}></Button>
       <Text>Clicked: {counter}</Text>
     </View>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { add } from '../redux/actions/counterActions';
+import { add } from '../../redux/actions/counterActions';
 
 const App = () => {
 

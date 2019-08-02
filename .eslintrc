@@ -1,0 +1,118 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "TopolPlugin": "readonly"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "semi": [
+      "error",
+      "always",
+      {
+        "omitLastInOneLineBlock": true
+      }
+    ],
+    "getter-return": "error",
+    "no-console": "error",
+    "multiline-comment-style": [
+      "error",
+      "starred-block"
+    ],
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": true,
+        "object": true
+      },
+      {
+        "enforceForRenamedProperties": false
+      }
+    ],
+    "prefer-promise-reject-errors": [
+      "error",
+      {
+        "allowEmptyReject": true
+      }
+    ],
+    "require-await": "error",
+    "no-return-await": "error",
+    "no-self-compare": "error",
+    "no-proto": "error",
+    "no-script-url": "error",
+    "no-sequences": "error",
+    "no-new-func": "error",
+    "no-new-wrappers": "error",
+    "no-labels": "error",
+    "no-loop-func": "error",
+    "no-invalid-this": "error",
+    "no-implicit-globals": "error",
+    "no-implied-eval": "error",
+    "no-extend-native": "error",
+    "no-empty-function": "error",
+    "no-alert": "error",
+    "default-case": "warn",
+    "complexity": [
+      "error",
+      5
+    ],
+    "block-scoped-var": "error",
+    "array-callback-return": "warn",
+    "no-label-var": "error",
+    "no-undefined": "error",
+    "no-use-before-define": "error",
+    "no-shadow": "error",
+    "comma-style": [
+      "error",
+      "last"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "never"
+    ],
+    "brace-style": "error",
+    "computed-property-spacing": [
+      "error",
+      "never"
+    ],
+    "func-style": [
+      "error",
+      "declaration",
+      {
+        "allowArrowFunctions": true
+      }
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "arrow-spacing": "error",
+    "no-duplicate-imports": "error",
+    "no-useless-constructor": "warn",
+    "prefer-const": "error",
+    "no-useless-rename": "error",
+    "prefer-rest-params": "error",
+    "prefer-spread": "error",
+    "prefer-template": "error",
+    "rest-spread-spacing": "warn",
+    "symbol-description": "warn",
+    "no-var": "error",
+  }
+}
