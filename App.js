@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Platform,
   StyleSheet,
@@ -14,6 +14,7 @@ import Clicker from './components/Clicker/Clicker';
 import rootReducers from "./redux/rootReducers";
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import textService from './services/text.service';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,8 +28,7 @@ const styles = StyleSheet.create({
 
 export default function App() {
   const store = createStore(rootReducers);
-
-  const [text, setText] = useState('');
+  const { onChange, text } = textService();
 
   return (
     <Provider store={store}>
@@ -44,7 +44,7 @@ export default function App() {
         <TextInput
           style={{ height: 40 }}
           placeholder="Type here to translate!"
-          onChangeText={(t) => setText(t)}
+          onChangeText={onChange}
           value={text}
         />
       </View>
