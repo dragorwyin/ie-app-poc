@@ -1,10 +1,10 @@
-import React from 'react';;
+import React from 'react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import renderer from 'react-test-renderer';
 
 // Components
-import Clicker from './Clicker.native';
+import Clicker from '../Clicker.native';
 
 describe('on Clicker init', () => {
 

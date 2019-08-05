@@ -3,10 +3,10 @@ import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
-import { add as addAction } from '../../redux/actions/counterActions';
+import { add as addAction } from '../../../redux/actions/counterActions';
 
 // Components
-import Clicker from './Clicker';
+import Clicker from '../Clicker';
 
 describe('on Clicker init', () => {
 
