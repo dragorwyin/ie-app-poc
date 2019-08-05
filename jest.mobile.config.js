@@ -80,7 +80,10 @@ module.exports = {
   // notifyMode: "always",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: null,
+  preset: 'jest-expo',
+  transform: {
+    '\\.js$': '<rootDir>/node_modules/react-native/jest/preprocessor.js',
+  },
 
   // Run tests from one or more projects
   // projects: null,
@@ -130,7 +133,7 @@ module.exports = {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: ['**/tests/**/!(*.native.)js?(x)', '**/?!(*.native.)+(spec|test).js?(x)'],
+  testMatch: ['**/tests/**/*.native.js?(x)', '**/?(*.native)+(.spec|.test).js?(x)'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   testPathIgnorePatterns: ['\\\\node_modules\\\\'],
@@ -154,7 +157,9 @@ module.exports = {
   // transform: {},
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
-  transformIgnorePatterns: ['<rootDir>/node_modules/'],
+  "transformIgnorePatterns": [
+    "<rootDir>/node_modules/(?!react-navigation|react-native|rn-apple-healthkit|rn-fetch-blob)"
+  ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
   // unmockedModulePathPatterns: undefined,
