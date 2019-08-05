@@ -11,9 +11,8 @@ import {
 
 import Clicker from './components/Clicker/Clicker';
 
-import rootReducers from "./redux/rootReducers";
+import rootStore from "./redux/rootStore";
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 import textService from './services/text.service';
 
 const styles = StyleSheet.create({
@@ -27,11 +26,10 @@ const styles = StyleSheet.create({
 });
 
 export default function App() {
-  const store = createStore(rootReducers);
   const { onChange, text } = textService();
 
   return (
-    <Provider store={store}>
+    <Provider store={rootStore()}>
       <View style={styles.container}>
         <Text style={styles.text}>Clicker components (with button): </Text>
         <Clicker></Clicker>

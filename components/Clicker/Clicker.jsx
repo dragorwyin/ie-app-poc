@@ -2,20 +2,23 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { add } from '../../redux/actions/counterActions';
 
-const App = () => {
+export const onClick = (dispatch) => {
+  dispatch(add());
+};
 
+const App = () => {
   const dispatch = useDispatch();
   const counter = useSelector(state => state.counter.count);
-
-  const onClick = () => {
-    dispatch(add());
-  };
 
   return (
     <main className="app">
       <h1>Click the button</h1>
-      <button onClick={onClick}>Click me</button>
-      <p>clicks: {counter}</p>
+      <button
+        data-testid="clicker-button"
+        onClick={() => onClick(dispatch)}>
+        Click me
+      </button>
+      <p data-testid="clicker-counter">clicks: {counter}</p>
     </main>
   );
 };
