@@ -29,6 +29,7 @@ module.exports = {
             '@babel/preset-react',
           ],
           plugins: [
+            'babel-plugin-styled-components',
             '@babel/transform-react-constant-elements',
             '@babel/transform-react-inline-elements',
             'transform-react-remove-prop-types',

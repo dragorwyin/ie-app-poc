@@ -4,11 +4,13 @@ import ReactDOM from 'react-dom';
 import rootStore from "../redux/rootStore";
 import { Provider } from 'react-redux';
 
-import Clicker from '../components/Clicker/Clicker';
+import GlobalStyled from './global.styled';
+import App from './App';
 
 ReactDOM.render(
   <Provider store={rootStore()}>
-    <Clicker />
+    <GlobalStyled />
+    <App />
   </Provider>,
   document.getElementById('root'),
 );

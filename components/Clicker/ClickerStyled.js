@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// STYLES
-export default styled.main`
+export default styled.div`
   color: grey;
 `;
