@@ -22,7 +22,14 @@ storiesOf('Clicker', module)
 
 storiesOf('Header', module)
   .add('Preview', () => (
-    <Header />
+    <>
+      <h1>Header</h1>
+      <Header active={0} />
+      <h3>Another header</h3>
+      <Header active={1} />
+      <h3>And another header</h3>
+      <Header active={2} />
+    </>
   ));
 
 addParameters({
