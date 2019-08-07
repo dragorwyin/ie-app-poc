@@ -1,5 +1,6 @@
 const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const paths = require('./paths');
 
@@ -41,6 +42,22 @@ module.exports = {
           ],
         },
       },
+      {
+        test: /\.(ico|jpe?g|png|gif|svg)$/,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
+      },
+      {
+        test: /\.(woff2?|ttf|eot)(\?.+)?$/,
+        use: [
+          {
+            loader: "file-loader",
+          },
+        ],
+      },
     ]
   },
   resolve: {
@@ -57,6 +74,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: paths.templatePath,
     }),
+    new CopyWebpackPlugin([
+      { from: 'assets', to: '' },
+    ])
   ],
   watch: true,
   watchOptions: {
