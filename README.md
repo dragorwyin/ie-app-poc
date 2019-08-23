@@ -1,4 +1,4 @@
-# Proof of Concept - React + Webpack + React Native + Redux
+# Proof of Concept - React + Webpack + React Native + Redux + Storybook
 
 It's proof of concept where will be use React + Webpack + React Native + Redux.
 
