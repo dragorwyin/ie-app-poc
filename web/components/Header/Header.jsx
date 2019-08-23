@@ -1,16 +1,15 @@
 import React from 'react';
-import { Header as HeaderStyled, NavLink } from './HeaderStyled';
+import Style, { NavLink } from './Header.styled';
 
 const Header = ({ active = 0 }) => {
   return (
-    <HeaderStyled>
-      <img src="/images/icon.png" alt="blah" />
+    <Style>
       <nav>
-        <NavLink href="/campaigns" active={active === 0}>Campaigns</NavLink>
-        <NavLink href="/templates" active={active === 1}>Templates</NavLink>
-        <NavLink href="/lists" active={active === 2}>Lists</NavLink>
+        <NavLink href="/item1" active={active === 0}>Item1</NavLink>
+        <NavLink href="/item2" active={active === 1}>Item2</NavLink>
+        <NavLink href="/item3" active={active === 2}>Item3</NavLink>
       </nav>
-    </HeaderStyled>
+    </Style>
   );
 };
 

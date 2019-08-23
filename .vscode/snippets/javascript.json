@@ -1,0 +1,159 @@
+{
+  "Redux Action Constant": {
+    "prefix": "reduxactionconst",
+    "body": [
+      "const $1 = ($2) => ({",
+      "\ttype: '$1',",
+      "\tdata: { $2 }",
+      "});"
+    ],
+    "description": "Redux Action"
+  },
+  "Redux Action Create": {
+    "prefix": "reduxaction",
+    "body": [
+      "export const $1 = ($2) => async (dispatch, getState) => {",
+      "\t$3",
+      "",
+      "\tdispatch($4($5));",
+      "};"
+    ],
+    "description": "Redux Action create"
+  },
+  "Redux Reducer Create": {
+    "prefix": "reduxreducer",
+    "body": [
+      "const initialState = {",
+      "",
+      "};",
+      "",
+      "const $1Reducer = (state = initialState, action) => {",
+      "\tconst { type, data } = action;",
+      "",
+      "\tswitch (type) {",
+      "\t\tcase $2:",
+      "\t\t\treturn {",
+      "\t\t\t\t...state,",
+      "\t\t\t\t",
+      "\t\t\t};",
+      "\t\tdefault:",
+      "\t\t\treturn state;",
+      "\t}",
+      "};",
+      "",
+      "export default $1Reducer;"
+    ],
+    "description": "Redux Reducer Switch"
+  },
+  "Test describe": {
+    "prefix": "testdescribe",
+    "body": [
+      "describe('$1', () => {",
+      "",
+      "\t$2",
+      "",
+      "});"
+    ],
+    "description": "Test describe"
+  },
+  "Test it()": {
+    "prefix": "testit",
+    "body": [
+      "it('should $1', () => {",
+      "\t\t$2",
+      "});"
+    ],
+    "description": "Test it()"
+  },
+  "Async self called function": {
+    "prefix": "asyncself",
+    "body": [
+      "(async () => {",
+      "\tawait $1;",
+      "})();"
+    ],
+    "description": "Async self called function"
+  },
+  "React Native Component": {
+    "prefix": "nativecomponent",
+    "body": [
+      "import React from 'react';",
+      "import { StyleSheet, View } from 'react-native';",
+      "",
+      "const styles = StyleSheet.create({",
+      "\tcontainer: {",
+      "",
+      "\t}",
+      "});",
+      "",
+      "const $1 = () => {",
+      "",
+      "\treturn (",
+      "\t\t<View style={styles.container}>",
+      "",
+      "\t\t</View>",
+      "\t);",
+      "};",
+      "",
+      "export default $1;"
+    ],
+    "description": "React Native Component"
+  },
+  "React Component": {
+    "prefix": "reactcomponent",
+    "body": [
+      "import React from 'react';",
+      "import Style from './$1.styled';",
+      "",
+      "const $1Container = ({ }) => {",
+      "",
+      "",
+      "\treturn (",
+      "\t\t<Style>",
+      "",
+      "\t\t</Style>",
+      "\t);",
+      "};",
+      "",
+      "export default $1Container;"
+    ],
+    "description": "React Component"
+  },
+  "Styled Component": {
+    "prefix": "styledcomponent",
+    "body": [
+      "import styled from 'styled-components';",
+      "",
+      "export const $1 = styled.div`",
+      "",
+      "`;",
+      "",
+      "export default $1;"
+    ],
+    "description": "Styled Component"
+  },
+  "Storybook new story": {
+    "prefix": "storynew",
+    "body": [
+      "storiesOf('$1', module)",
+      "  .addDecorator(withKnobs)",
+      "  .add('$2', () => {",
+      "    return (",
+      "      $3",
+      "    );",
+      "  });"
+    ],
+    "description": "Storybook new story"
+  },
+  "Storybook add story": {
+    "prefix": "storyadd",
+    "body": [
+      "add('$1', () => {",
+      "  return (",
+      "    $2",
+      "  );",
+      "})"
+    ],
+    "description": "Storybook add story"
+  }
+}

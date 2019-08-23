@@ -1,0 +1,76 @@
+{
+  "Test describe": {
+    "prefix": "testdescribe",
+    "body": [
+      "describe('$1', () => {",
+      "",
+      "\t$2",
+      "",
+      "});"
+    ],
+    "description": "Test describe"
+  },
+  "Test it()": {
+    "prefix": "testit",
+    "body": [
+      "it('should $1', () => {",
+      "\t\t$2",
+      "});"
+    ],
+    "description": "Test it()"
+  },
+  "Async self called function": {
+    "prefix": "asyncself",
+    "body": [
+      "(async () => {",
+      "\tawait $1;",
+      "})();"
+    ],
+    "description": "Async self called function"
+  },
+  "React Native Component": {
+    "prefix": "nativecomponent",
+    "body": [
+      "import React from 'react';",
+      "import { StyleSheet, View } from 'react-native';",
+      "",
+      "const styles = StyleSheet.create({",
+      "  container: {",
+      "",
+      "  }",
+      "});",
+      "",
+      "const $1 = () => {",
+      "",
+      "  return (",
+      "    <View style={styles.container}>",
+      "",
+      "    </View>",
+      "  );",
+      "};",
+      "",
+      "export default $1;"
+    ],
+    "description": "React Native Component"
+  },
+  "React Component": {
+    "prefix": "reactcomponent",
+    "body": [
+      "import React from 'react';",
+      "import Style from './$1.styled';",
+      "",
+      "const $1Container = ({ }) => {",
+      "",
+      "",
+      "  return (",
+      "    <Style>",
+      "",
+      "    </Style>",
+      "  );",
+      "};",
+      "",
+      "export default $1Container;"
+    ],
+    "description": "React Component"
+  }
+}
