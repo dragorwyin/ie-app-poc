@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: paths.outputPath,
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -67,6 +68,7 @@ module.exports = {
     contentBase: paths.outputPath,
     hot: true,
     port: 8080,
+    historyApiFallback: true,
   },
   plugins: [
     new CleanWebpackPlugin(),
